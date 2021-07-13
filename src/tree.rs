@@ -39,7 +39,7 @@ selectors! {
 /// A tree widget for a collection of items organized in a hierachical way.
 pub struct Tree<T>
 where
-    T: TreeNode,
+    T: Data,
 {
     /// The root node of this tree
     root_node: TreeNodeWidget<T>,
