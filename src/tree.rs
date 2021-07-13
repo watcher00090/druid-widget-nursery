@@ -150,13 +150,13 @@ impl Widget<bool> for Wedge {
     }
 }
 
-type WidgetFactoryCallback<T> = Arc<Box<dyn Fn() -> Box<dyn Widget<T>>>>;
+type WidgetFactoryCallback<T: Data> = Arc<Box<dyn Fn() -> Box<dyn Widget<T: Data>>>>;
 
 /// An internal widget used to display a single node and its children
 /// This is used recursively to build the tree.
 struct TreeNodeWidget<T>
 where
-    T: TreeNode,
+    T: Data,
 {
     // the index of the widget in its parent
     index: usize,
