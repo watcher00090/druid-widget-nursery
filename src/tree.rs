@@ -48,8 +48,8 @@ where
 /// A tree node, with methods providing its own label and its children.
 /// This is the data expected by the tree widget.
 pub trait TreeNode
-where
-    Self: Data,
+//where
+//    Self: Data,
 {
     /// Returns how many children are below this node. It could be zero if this is a leaf.
     fn children_count(&self) -> usize;
