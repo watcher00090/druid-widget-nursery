@@ -172,7 +172,7 @@ where
     make_widget: WidgetFactoryCallback<T>,
 }
 
-impl<T: TreeNode> TreeNodeWidget<T: 'static> {
+impl<T: 'static> TreeNodeWidget<T: 'static> {
     /// Create a TreeNodeWidget from a TreeNode.
     fn new(make_widget: WidgetFactoryCallback<T>, index: usize, expanded: bool) -> Self {
         TreeNodeWidget {
